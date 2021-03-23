@@ -33,7 +33,7 @@ object LinkedListExample {
 //    equipmentExample()
   }
 
-
+  /*
   def equipmentExample(): Unit  = {
     var equipmentList = new LinkedListNode[Equipment](new GoldMines(), null)
     equipmentList = equipmentList.prepend(new Excavators())
@@ -43,4 +43,5 @@ object LinkedListExample {
 
 //    equipmentList.foreach(toCall)
   }
+  */
 }
