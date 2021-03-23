@@ -1,5 +1,7 @@
 package week11.linkedlist
 
+import week11.equipment.{Equipment, Excavators, GoldMines, Shovels}
+
 object LinkedListExample {
 
   def main(args: Array[String]): Unit = {
