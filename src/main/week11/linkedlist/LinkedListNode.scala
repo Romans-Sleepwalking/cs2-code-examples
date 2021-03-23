@@ -91,7 +91,6 @@ class LinkedListNode[A](var value: A, var next: LinkedListNode[A]) {
     null
   }
 
-
   /**
    * returns the head of a new linked list containing f(element) for each element in the original list
    */
@@ -105,9 +104,25 @@ class LinkedListNode[A](var value: A, var next: LinkedListNode[A]) {
   }
 
   /**
+   * passes function to something for all and something
+   */
+  def reduce(action: (A, A) => A): A = {
+    var node = this
+    var container = this.value
+    println("this node value is: " + container)
+
+    while (node.next != null) {
+      node = node.next
+      println("the next node value is: " + node.value)
+      container = action(container, node.value)
+    }
+    container
+  }
+
+  /*
    * calls the provided function on every element in the list
    */
-  def foreach(f: A => Unit): Unit = {
+  def foreach(f: (A) => Unit): Unit = {
     f(this.value)
     if (this.next != null) {
       this.next.foreach(f)
